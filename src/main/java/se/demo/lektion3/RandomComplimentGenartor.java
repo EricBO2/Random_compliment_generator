@@ -2,10 +2,11 @@ package se.demo.lektion3;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
-public class Random {
+public class RandomComplimentGenartor {
     List<String> complimentList = new ArrayList<String>();
-    public Random() {
+    public RandomComplimentGenartor() {
         complimentList.add("Nice hair");
         complimentList.add("Nice face");
         complimentList.add("Nice eyes");
@@ -13,6 +14,10 @@ public class Random {
         complimentList.add("Nice mustache");
     }
 
-
+    public String getRandomCompliment() {
+        Random rnd = new Random();
+        int i = rnd.nextInt(complimentList.size());
+        return complimentList.get(i);
+    }
 
 }
